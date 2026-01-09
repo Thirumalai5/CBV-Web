@@ -1,0 +1,84 @@
+{
+  "name": "CBV System - Continuous Biometric Verification",
+  "short_name": "CBV System",
+  "description": "Continuous Biometric Verification System for secure authentication using face recognition, liveness detection, and behavioral biometrics",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#0f3460",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "utilities", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Home Screen"
+    },
+    {
+      "src": "/screenshots/verification.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Verification Screen"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Protected App",
+      "short_name": "App",
+      "description": "Open Protected Application",
+      "url": "/protected-app",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Data Capture",
+      "short_name": "Capture",
+      "description": "Capture Biometric Data",
+      "url": "/capture",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "short_name": "Settings",
+      "description": "Application Settings",
+      "url": "/settings",
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

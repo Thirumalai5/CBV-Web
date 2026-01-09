@@ -1,0 +1,94 @@
+/**
+ * CBV System - State Indicator Styles
+ */
+
+.state-indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.state-indicator--compact {
+  flex-direction: row;
+  align-items: center;
+}
+
+.state-indicator__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.state-indicator--compact .state-indicator__badge {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.state-indicator__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.state-indicator--compact .state-indicator__icon {
+  font-size: 0.875rem;
+}
+
+.state-indicator__name {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.state-indicator__description {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding-left: 1rem;
+}
+
+/* State-specific styles */
+.state-indicator--normal .state-indicator__badge {
+  background-color: #10b981;
+}
+
+.state-indicator--watch .state-indicator__badge {
+  background-color: #f59e0b;
+}
+
+.state-indicator--restrict .state-indicator__badge {
+  background-color: #f97316;
+}
+
+.state-indicator--reauth .state-indicator__badge {
+  background-color: #ef4444;
+  animation: pulse-alert 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes pulse-alert {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .state-indicator__badge {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .state-indicator__description {
+    font-size: 0.75rem;
+  }
+}

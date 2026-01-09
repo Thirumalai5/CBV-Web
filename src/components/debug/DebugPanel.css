@@ -1,0 +1,319 @@
+/* Debug Panel Styles */
+
+.debug-panel-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9998; /* Below warning banner (9999) but above other content */
+  transition: transform 0.2s;
+}
+
+.debug-panel-toggle:hover {
+  transform: scale(1.1);
+}
+
+.debug-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-height: 400px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  z-index: 9998; /* Below warning banner (9999) but above other content */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.debug-panel.expanded {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.debug-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.debug-panel-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.debug-panel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.debug-panel-controls button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.debug-panel-controls button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.debug-panel-content {
+  padding: 16px;
+}
+
+/* Metrics Grid */
+.debug-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.debug-metric {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.debug-metric-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.debug-metric-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #10b981;
+}
+
+.debug-state {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Trust Score Gauge */
+.debug-gauge {
+  margin-bottom: 16px;
+}
+
+.debug-gauge-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.debug-gauge-bar {
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.debug-gauge-fill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+}
+
+.debug-gauge-markers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+
+.debug-gauge-markers span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+/* Debug Sections */
+.debug-section {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.debug-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.debug-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.debug-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.debug-section-header h4 {
+  margin: 0;
+}
+
+.debug-clear-btn {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.debug-clear-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+/* Info Rows */
+.debug-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.debug-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.debug-info-row span:first-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.debug-info-row span:last-child {
+  color: white;
+  font-weight: 600;
+}
+
+/* Console Logs */
+.debug-logs {
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.debug-logs::-webkit-scrollbar {
+  width: 6px;
+}
+
+.debug-logs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.debug-logs::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.debug-logs::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.debug-log-empty {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  font-style: italic;
+}
+
+.debug-log-entry {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.debug-log-entry:last-child {
+  border-bottom: none;
+}
+
+.debug-log-time {
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.debug-log-level {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.debug-log-message {
+  flex: 1;
+  word-break: break-word;
+}
+
+/* Log Level Colors */
+.debug-log-debug .debug-log-level {
+  color: #6b7280;
+}
+
+.debug-log-info .debug-log-level {
+  color: #3b82f6;
+}
+
+.debug-log-warn .debug-log-level {
+  color: #f59e0b;
+}
+
+.debug-log-error .debug-log-level {
+  color: #ef4444;
+}
+
+.debug-log-metric .debug-log-level {
+  color: #8b5cf6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .debug-panel {
+    width: calc(100vw - 40px);
+    max-width: 350px;
+  }
+}

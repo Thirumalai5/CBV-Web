@@ -1,0 +1,143 @@
+/**
+ * CBV System - App Styles
+ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loading State */
+.app-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.loading-container {
+  text-align: center;
+  color: white;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 30px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.loading-container p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Error State */
+.app-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.error-container {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 48px;
+}
+
+.error-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+.error-container h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.error-container p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.error-container button {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: white;
+  color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.error-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Protected Route Loading */
+.protected-route-loading {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.protected-route-loading .loading-container {
+  color: var(--color-text-primary);
+}
+
+.protected-route-loading .spinner {
+  border-color: var(--color-border);
+  border-top-color: var(--color-primary);
+}
+
+/* Page Loading (Lazy Loading) */
+.page-loading {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.page-loading .loading-container {
+  color: var(--color-text-primary);
+}
+
+.page-loading .spinner {
+  width: 50px;
+  height: 50px;
+  border-width: 5px;
+  border-color: var(--color-border);
+  border-top-color: var(--color-primary);
+  margin: 0 auto 20px;
+}
+
+.page-loading .loading-container p {
+  margin-top: var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}

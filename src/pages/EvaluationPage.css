@@ -1,0 +1,535 @@
+/* Evaluation Page Styles */
+
+.evaluation-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+/* Header */
+.evaluation-header {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.header-content h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.header-subtitle {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.header-stats {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.stat-value.status-running {
+  color: var(--color-primary);
+}
+
+.stat-value.status-idle {
+  color: var(--color-text-secondary);
+}
+
+/* Control Panel */
+.control-panel {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.control-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* Progress Section */
+.progress-section {
+  margin-top: var(--spacing-lg);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-label {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.progress-percentage {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--color-background);
+  border-radius: var(--border-radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  transition: width 0.3s ease;
+  border-radius: var(--border-radius-full);
+}
+
+/* Scenarios Section */
+.scenarios-section {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.scenarios-section h2 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--color-text-primary);
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.scenario-card {
+  background: var(--color-background);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.scenario-card.status-passed {
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.scenario-card.status-failed {
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.scenario-card.status-pending {
+  border-color: var(--color-border);
+}
+
+.scenario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.scenario-header h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+}
+
+.scenario-status {
+  font-size: 1.5rem;
+}
+
+.scenario-description {
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--font-size-sm);
+}
+
+.scenario-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--border-radius-sm);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.detail-label {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.detail-value {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* Metrics Section */
+.metrics-section {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.metrics-section h2 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--color-text-primary);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--color-background);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.metric-icon {
+  font-size: 2rem;
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.metric-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Results Section */
+.results-section {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.results-header h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.export-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.result-card {
+  background: var(--color-background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.result-card h3 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+}
+
+/* Security Summary */
+.security-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.grade-display {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: white;
+  border-radius: var(--border-radius-md);
+}
+
+.grade-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.grade-value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: white;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.metric-row span:first-child {
+  color: var(--color-text-secondary);
+}
+
+.metric-row span:last-child {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Confusion Matrix */
+.confusion-matrix {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 1px;
+  background: var(--color-border);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.matrix-row {
+  display: contents;
+}
+
+.matrix-cell {
+  padding: var(--spacing-md);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+}
+
+.matrix-cell.header {
+  background: var(--color-background);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  text-align: center;
+}
+
+.matrix-cell.tp {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.matrix-cell.tn {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.matrix-cell.fp {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-danger);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+.matrix-cell.fn {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+/* Performance Summary */
+.performance-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.perf-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: white;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.perf-label {
+  color: var(--color-text-secondary);
+}
+
+.perf-value {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Footer */
+.evaluation-footer {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: white;
+}
+
+.evaluation-footer p {
+  margin: var(--spacing-xs) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evaluation-page {
+    padding: var(--spacing-md);
+  }
+
+  .evaluation-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-stats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confusion-matrix {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+
+  .matrix-cell {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  .matrix-cell.header {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .control-actions {
+    width: 100%;
+  }
+
+  .control-actions button {
+    flex: 1;
+  }
+
+  .grade-value {
+    font-size: 2rem;
+  }
+}

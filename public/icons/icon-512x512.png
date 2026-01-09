@@ -1,0 +1,32 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0f3460" rx="80"/>
+  
+  <!-- Shield outline -->
+  <path d="M 256 80 L 400 140 L 400 280 Q 400 380 256 440 Q 112 380 112 280 L 112 140 Z" 
+        fill="none" stroke="#16213e" stroke-width="20"/>
+  
+  <!-- Shield fill -->
+  <path d="M 256 100 L 380 150 L 380 270 Q 380 360 256 410 Q 132 360 132 270 L 132 150 Z" 
+        fill="#1a1a2e"/>
+  
+  <!-- Face icon -->
+  <circle cx="256" cy="220" r="40" fill="#00d9ff" opacity="0.8"/>
+  <ellipse cx="236" cy="210" rx="8" ry="12" fill="#0f3460"/>
+  <ellipse cx="276" cy="210" rx="8" ry="12" fill="#0f3460"/>
+  <path d="M 236 235 Q 256 245 276 235" fill="none" stroke="#0f3460" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Fingerprint lines -->
+  <g stroke="#00d9ff" stroke-width="3" fill="none" opacity="0.6">
+    <path d="M 200 300 Q 220 290 240 300"/>
+    <path d="M 272 300 Q 292 290 312 300"/>
+    <path d="M 210 320 Q 230 310 250 320"/>
+    <path d="M 262 320 Q 282 310 302 320"/>
+    <path d="M 220 340 Q 240 330 260 340"/>
+    <path d="M 252 340 Q 272 330 292 340"/>
+  </g>
+  
+  <!-- CBV Text -->
+  <text x="256" y="380" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+        fill="#00d9ff" text-anchor="middle">CBV</text>
+</svg>

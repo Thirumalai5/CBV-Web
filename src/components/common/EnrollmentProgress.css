@@ -1,0 +1,213 @@
+/**
+ * CBV System - Enrollment Progress Styles
+ */
+
+.enrollment-progress {
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.enrollment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.enrollment-header h3 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+}
+
+.status-badge {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge-gray {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+}
+
+.status-badge-blue {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-badge-green {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.overall-progress {
+  margin-bottom: var(--spacing-xl);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.progress-percentage {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.progress-bar {
+  height: 24px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar.small {
+  height: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.progress-fill.complete {
+  background: linear-gradient(90deg, var(--color-success), #34d399);
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.requirements-list {
+  margin-top: var(--spacing-xl);
+}
+
+.requirements-list h4 {
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+}
+
+.requirement-item {
+  margin-bottom: var(--spacing-lg);
+}
+
+.requirement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.requirement-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.requirement-count {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-mono);
+}
+
+.requirements-missing {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: #fef2f2;
+  border-left: 4px solid var(--color-error);
+  border-radius: var(--radius-md);
+}
+
+.requirements-missing h5 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-error);
+}
+
+.requirements-missing ul {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  list-style-type: disc;
+}
+
+.requirements-missing li {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  color: #991b1b;
+}
+
+.requirements-met {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background: #d1fae5;
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius-md);
+}
+
+.requirements-met p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: #065f46;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enrollment-progress {
+    padding: var(--spacing-lg);
+  }
+
+  .enrollment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .requirement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
