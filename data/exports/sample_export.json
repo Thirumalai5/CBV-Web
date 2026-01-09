@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "userId": "Thiru",
+  "exportedAt": "2024-01-15T10:30:00.000Z",
+  "faceSamples": [
+    {
+      "id": "face_1",
+      "dataUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAA8A/9k=",
+      "quality": 0.85,
+      "timestamp": 1705315800000,
+      "detection": {
+        "confidence": 0.95,
+        "landmarks": []
+      }
+    },
+    {
+      "id": "face_2",
+      "dataUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAA8A/9k=",
+      "quality": 0.88,
+      "timestamp": 1705315801000,
+      "detection": {
+        "confidence": 0.96,
+        "landmarks": []
+      }
+    }
+  ],
+  "livenessSamples": [
+    {
+      "id": "liveness_1",
+      "duration": 30,
+      "timestamp": 1705315830000,
+      "features": {
+        "earSequence": [0.3, 0.28, 0.15, 0.12, 0.25, 0.3, 0.29, 0.16, 0.14, 0.27],
+        "blinkCount": 8,
+        "blinkTimestamps": [1000, 3500, 6200, 9800, 13400, 17100, 21500, 26300],
+        "blinkDurations": [150, 140, 160, 145, 155, 150, 148, 152],
+        "confidence": 0.92
+      }
+    }
+  ],
+  "behaviorWindows": [
+    {
+      "id": "behavior_1",
+      "startTime": 1705315800000,
+      "endTime": 1705315805000,
+      "duration": 5,
+      "features": {
+        "keystroke": {
+          "dwellTimes": [120, 115, 130, 125, 118],
+          "flightTimes": [150, 145, 160, 155, 148],
+          "keyCount": 5
+        },
+        "mouse": {
+          "velocities": [200, 210, 195, 205, 198],
+          "curvatures": [0.5, 0.48, 0.52, 0.49, 0.51],
+          "clickDurations": [80, 85, 78, 82, 81],
+          "moveCount": 50,
+          "clickCount": 5
+        },
+        "idleTime": 500
+      }
+    },
+    {
+      "id": "behavior_2",
+      "startTime": 1705315805000,
+      "endTime": 1705315810000,
+      "duration": 5,
+      "features": {
+        "keystroke": {
+          "dwellTimes": [118, 122, 125, 120, 123],
+          "flightTimes": [148, 152, 155, 150, 153],
+          "keyCount": 5
+        },
+        "mouse": {
+          "velocities": [198, 202, 205, 200, 203],
+          "curvatures": [0.49, 0.51, 0.50, 0.48, 0.52],
+          "clickDurations": [81, 83, 80, 82, 84],
+          "moveCount": 48,
+          "clickCount": 5
+        },
+        "idleTime": 480
+      }
+    }
+  ]
+}
